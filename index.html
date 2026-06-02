@@ -1,0 +1,1167 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="icon" type="image/png" href="Images/logo.png">
+    <link rel="apple-touch-icon" href="Images/logo.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Soluciones Metalmecánicas J2 - Empresa metalmecánica en Cartagena, Colombia. Fabricación e instalación de estructuras metálicas, cubiertas, containers, tuberías contraincendios. Llámanos: +57 301 270 2136">
+    <meta name="keywords"
+        content="Soluciones Metalmecánicas J2, Soluciones Metalmetalicas J2, metal metalicas j2, metalmetalicas j2, metal metalicas cartagena, metalmetalicasj2 cartagena, soluciones metal metalicas, soluciones metalmetalicas, soluciones metal metalicas j2, estructuras metálicas Cartagena, metalmecánica Cartagena, soldadura industrial Cartagena, montajes industriales Colombia">
+    <meta name="author" content="Soluciones Metalmecánicas J2">
+    <meta property="og:title" content="Soluciones Metalmecánicas J2 - Cartagena, Colombia">
+    <meta property="og:description"
+        content="Empresa metalmecánica en Cartagena. Estructuras metálicas, cubiertas, containers, tuberías contraincendios.">
+    <meta property="og:url" content="https://metalmetalicasj2.github.io/web/">
+    <title>Soluciones Metalmecánicas J2 | Metalmecánica y Estructuras Metálicas en Cartagena</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@400;600;700;900&family=Poppins:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <style>
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --rojo: #cc1f1f;
+            --rojo-oscuro: #9e1515;
+            --negro: #0d0d0d;
+            --gris-oscuro: #1a1a1a;
+            --gris-medio: #2a2a2a;
+            --blanco: #ffffff;
+            --dorado: #c9a84c;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--negro);
+            color: var(--blanco);
+            font-family: 'Poppins', sans-serif;
+            overflow-x: hidden;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background: rgba(13, 13, 13, 0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(204, 31, 31, 0.3);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 6%;
+        }
+
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+        }
+
+        .nav-logo img {
+            width: 44px;
+            height: 44px;
+            object-fit: contain;
+        }
+
+        .nav-logo span {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.3rem;
+            color: var(--blanco);
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            font-size: 0.82rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--rojo);
+        }
+
+        /* HERO */
+        .hero {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 100px 20px 60px;
+            overflow: hidden;
+        }
+
+        .hero video {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            background: linear-gradient(to bottom, rgba(13, 13, 13, 0.7) 0%, rgba(13, 13, 13, 0.5) 50%, rgba(13, 13, 13, 0.9) 100%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .hero-logo {
+            width: 175px;
+            height: 200px;
+            object-fit: contain;
+            filter: drop-shadow(0 0 30px rgba(204, 31, 31, 0.5));
+            animation: float 4s ease-in-out infinite;
+            margin-bottom: 24px;
+        }
+
+        @keyframes float {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        .hero h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2.4rem, 6vw, 5rem);
+            letter-spacing: 4px;
+            color: var(--blanco);
+            text-shadow: 0 0 40px rgba(204, 31, 31, 0.4);
+            margin-bottom: 10px;
+            line-height: 1;
+        }
+
+        .hero-slogan {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-style: italic;
+            font-size: clamp(0.75rem, 1.5vw, 1rem);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--rojo);
+            margin-bottom: 48px;
+        }
+
+        .hero-line {
+            width: 80px;
+            height: 3px;
+            background: var(--rojo);
+            margin: 0 auto 40px;
+        }
+
+        .hero-btns {
+            display: flex;
+            gap: 14px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn-hero {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            padding: 13px 28px;
+            border-radius: 3px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .btn-primary {
+            background: var(--rojo);
+            color: #fff;
+            border-color: var(--rojo);
+        }
+
+        .btn-primary:hover {
+            background: var(--rojo-oscuro);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 24px rgba(204, 31, 31, 0.4);
+        }
+
+        .btn-outline {
+            background: transparent;
+            color: #fff;
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--rojo);
+            color: var(--rojo);
+            transform: translateY(-3px);
+        }
+
+        /* SECCIONES */
+        section {
+            padding: 90px 8%;
+        }
+
+        .sec-label {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.72rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--rojo);
+            margin-bottom: 10px;
+        }
+
+        .sec-title {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: clamp(2rem, 4vw, 3.2rem);
+            letter-spacing: 3px;
+            color: var(--blanco);
+            margin-bottom: 16px;
+        }
+
+        .sec-title span {
+            color: var(--rojo);
+        }
+
+        .sec-divider {
+            width: 60px;
+            height: 3px;
+            background: var(--rojo);
+            margin-bottom: 50px;
+        }
+
+        /* CONÓCENOS */
+        #conocenos {
+            background: var(--gris-oscuro);
+        }
+
+        .conocenos-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .conocenos-img-wrap img {
+            width: 100%;
+            max-width: 380px;
+            display: block;
+            margin: 0 auto;
+            filter: drop-shadow(0 0 40px rgba(204, 31, 31, 0.3));
+            animation: float 5s ease-in-out infinite;
+        }
+
+        .conocenos-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .card-rojo {
+            background: var(--rojo);
+            padding: 20px 24px;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-left: 5px solid var(--dorado);
+        }
+
+        .card-rojo:hover {
+            background: var(--rojo-oscuro);
+            transform: translateX(6px);
+        }
+
+        .card-rojo h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            margin-bottom: 6px;
+        }
+
+        .card-rojo p {
+            font-size: 0.82rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .card-gris {
+            background: var(--gris-medio);
+            padding: 20px 24px;
+            border-radius: 4px;
+            border-left: 5px solid var(--rojo);
+            transition: all 0.3s;
+        }
+
+        .card-gris:hover {
+            transform: translateX(6px);
+        }
+
+        .card-gris h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.4rem;
+            letter-spacing: 2px;
+            color: var(--rojo);
+            margin-bottom: 6px;
+        }
+
+        .card-gris p {
+            font-size: 0.82rem;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.75);
+        }
+
+        /* SERVICIOS */
+        #servicios {
+            background: var(--negro);
+        }
+
+        .servicios-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .servicios-header img {
+            width: 70px;
+            height: 70px;
+            object-fit: contain;
+        }
+
+        .servicios-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+
+        .servicio-card {
+            background: var(--gris-oscuro);
+            border: 1px solid rgba(204, 31, 31, 0.2);
+            border-radius: 4px;
+            padding: 24px 20px;
+            transition: all 0.3s;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .servicio-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: var(--rojo);
+            transform: scaleY(0);
+            transition: transform 0.3s;
+            transform-origin: bottom;
+        }
+
+        .servicio-card:hover::before {
+            transform: scaleY(1);
+        }
+
+        .servicio-card:hover {
+            border-color: var(--rojo);
+            transform: translateY(-4px);
+            background: var(--gris-medio);
+        }
+
+        .servicio-card h4 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.9rem;
+            color: var(--blanco);
+            margin-bottom: 10px;
+        }
+
+        .servicio-card p {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.6);
+            line-height: 1.6;
+        }
+
+        .servicio-num {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.5rem;
+            color: rgba(204, 31, 31, 0.15);
+            position: absolute;
+            right: 14px;
+            bottom: 8px;
+        }
+
+        /* CLIENTES */
+        #clientes {
+            background: var(--gris-oscuro);
+        }
+
+        .clientes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+            gap: 16px;
+        }
+
+        .cliente-card {
+            background: var(--gris-medio);
+            border: 1px solid rgba(255, 255, 255, 0.07);
+            border-radius: 4px;
+            padding: 24px 16px;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+        }
+
+        .cliente-card img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+            margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .cliente-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .cliente-card:hover {
+            border-color: var(--rojo);
+            transform: translateY(-4px);
+        }
+
+        .cliente-card span {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        /* CONTACTO */
+        #contacto {
+            background: var(--negro);
+        }
+
+        .contacto-grid {
+            display: grid;
+            grid-template-columns: 340px 1fr;
+            gap: 0;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid rgba(204, 31, 31, 0.2);
+        }
+
+        .contacto-izq {
+            background: var(--rojo);
+            padding: 40px 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .contacto-izq img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            margin-bottom: 16px;
+            filter: drop-shadow(0 4px 20px rgba(0, 0, 0, 0.4));
+        }
+
+        .contacto-izq h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.2rem;
+            letter-spacing: 3px;
+            margin-bottom: 8px;
+        }
+
+        .contacto-izq p {
+            font-size: 0.78rem;
+            opacity: 0.85;
+            font-style: italic;
+        }
+
+        .contacto-der {
+            background: var(--gris-oscuro);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+            justify-content: center;
+            min-width: 0;
+        }
+
+        .contacto-info strong {
+            word-break: break-word;
+        }
+
+        .contacto-row {
+            display: flex;
+            align-items: flex-start;
+            gap: 16px;
+        }
+
+        .contacto-icon {
+            font-size: 1.4rem;
+            margin-top: 2px;
+            min-width: 28px;
+        }
+
+        .contacto-info {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .contacto-info strong {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            color: var(--blanco);
+        }
+
+        .contacto-info span {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            margin-top: 2px;
+        }
+
+        .btn-whatsapp {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: #25D366;
+            color: #fff;
+            text-decoration: none;
+            padding: 13px 24px;
+            border-radius: 4px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s;
+            width: fit-content;
+        }
+
+        .btn-whatsapp:hover {
+            background: #1ebe5d;
+            transform: translateY(-2px);
+        }
+
+        /* MAPA */
+        .mapa-preview {
+            display: block;
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            border: 2px solid rgba(204, 31, 31, 0.3);
+            transition: border-color 0.3s, transform 0.3s;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .mapa-preview:hover {
+            border-color: var(--rojo);
+            transform: translateY(-2px);
+        }
+
+        .mapa-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(13, 13, 13, 0.45);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .mapa-overlay span {
+            background: var(--rojo);
+            color: #fff;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.82rem;
+            letter-spacing: 1px;
+            padding: 10px 20px;
+            border-radius: 4px;
+            text-transform: uppercase;
+        }
+
+        .mapa-preview:hover .mapa-overlay {
+            opacity: 1;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--gris-oscuro);
+            border-top: 1px solid rgba(204, 31, 31, 0.2);
+            padding: 24px 8%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        footer span {
+            font-size: 0.78rem;
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        footer strong {
+            color: var(--rojo);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 900px) {
+            .contacto-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .conocenos-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            footer {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .contacto-der {
+                padding: 30px 24px;
+            }
+
+            .contacto-izq {
+                padding: 36px 24px;
+            }
+
+            .contacto-izq h2 {
+                font-size: 2rem;
+            }
+
+            section {
+                padding: 60px 5%;
+            }
+
+            .hero {
+                padding: 80px 20px 30px;
+            }
+
+            .hero h1 {
+                font-size: 1.9rem;
+                letter-spacing: 2px;
+            }
+
+            .hero-logo {
+                width: 120px;
+                height: 140px;
+                margin-bottom: 14px;
+            }
+
+            .hero-slogan {
+                font-size: 0.68rem;
+                letter-spacing: 2px;
+                margin-bottom: 20px;
+            }
+
+            .hero-line {
+                margin-bottom: 20px;
+            }
+
+            .hero-btns {
+                gap: 8px;
+            }
+
+            .btn-hero {
+                padding: 10px 20px;
+                font-size: 0.72rem;
+                letter-spacing: 1px;
+            }
+        }
+
+        /* MODALES */
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.85);
+            justify-content: center;
+            align-items: center;
+            z-index: 9999;
+        }
+
+        .modal-content {
+            background: #1a1a1a;
+            padding: 25px;
+            border-radius: 12px;
+            position: relative;
+            text-align: center;
+            max-width: 90%;
+        }
+
+        .modal-content img {
+            width: 200px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        #cerrar,
+        #cerrar-servicio {
+            position: absolute;
+            top: 8px;
+            right: 12px;
+            cursor: pointer;
+            font-size: 22px;
+            color: white;
+        }
+
+        /* MODAL SERVICIOS */
+        #img-servicio {
+            width: 320px;
+            max-width: 80vw;
+            border-radius: 8px;
+            object-fit: contain;
+            transition: transform 0.3s ease, opacity 0.25s ease;
+            touch-action: pan-y;
+        }
+
+        #prev,
+        #next {
+            background: var(--rojo);
+            border: none;
+            color: white;
+            padding: 8px 14px;
+            margin: 10px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        #prev:hover,
+        #next:hover {
+            background: var(--rojo-oscuro);
+        }
+
+        .slide-left {
+            transform: translateX(-60%);
+            opacity: 0;
+        }
+
+        .slide-right {
+            transform: translateX(60%);
+            opacity: 0;
+        }
+
+        .zoomed {
+            transform: scale(1.8);
+            cursor: zoom-out;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="#inicio" class="nav-logo">
+            <img src="Images/logo.png" alt="Logo">
+            <span>Soluciones Metalmecánicas J2</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="#conocenos">Conócenos</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#clientes">Clientes</a></li>
+            <li><a href="#contacto">Contáctenos</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="inicio">
+        <video autoplay loop muted playsinline>
+            <source src="https://assets.mixkit.co/videos/preview/mixkit-welder-working-in-a-factory-40049-large.mp4"
+                type="video/mp4">
+        </video>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <img src="Images/logo.png" class="hero-logo">
+            <h1>Soluciones Metalmecánicas J2</h1>
+            <p class="hero-slogan">Nacimos para servir con calidad y cumplimiento</p>
+            <div class="hero-line"></div>
+            <div class="hero-btns">
+                <a href="#servicios" class="btn-hero btn-primary">Ver Servicios</a>
+                <a href="#contacto" class="btn-hero btn-outline">Contáctenos</a>
+                <a href="#conocenos" class="btn-hero btn-outline">Conócenos</a>
+                <a href="#clientes" class="btn-hero btn-outline">Principales Clientes</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="conocenos">
+        <div class="sec-label">Sobre nosotros</div>
+        <div class="sec-title">Conóce<span>nos</span></div>
+        <div class="sec-divider"></div>
+        <div class="conocenos-grid">
+            <div class="conocenos-img-wrap">
+                <img src="Images/logo.png">
+            </div>
+            <div class="conocenos-cards">
+                <div class="card-rojo">
+                    <h3>¿Quiénes somos?</h3>
+                    <p>Somos la empresa que se encarga de suplir las necesidades de nuestros clientes en mantenimiento,
+                        reparación e instalación de soluciones en infraestructuras y equipos o maquinarias de
+                        producción.</p>
+                </div>
+                <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+                    <div class="card-gris">
+                        <h3>Misión Principal</h3>
+                        <p>Servir con calidad y cumplimiento en soluciones integrales de infraestructuras y montajes
+                            metálicos en industrias y edificaciones.</p>
+                    </div>
+                    <div class="card-gris">
+                        <h3>Hacia dónde vamos</h3>
+                        <p>En 2030 seremos reconocidos en el 99.99% del sector industrial de Cartagena como proveedores
+                            de montajes industriales.</p>
+                    </div>
+                </div>
+                <div class="card-rojo">
+                    <h3>Calidad & Experiencia</h3>
+                    <p>Soldadores certificados · Certificación en trabajos en alturas · Coordinadores · Equipo contable
+                        y administrativo. Cumplimos con todas las normas de seguridad y requisitos legales.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios">
+        <div class="servicios-header">
+            <img src="Images/logo.png">
+            <div>
+                <div class="sec-label">Lo que hacemos</div>
+                <div class="sec-title">Nuestros <span>Servicios</span></div>
+                <div class="sec-divider"></div>
+            </div>
+        </div>
+        <div class="servicios-grid">
+            <div class="servicio-card"
+                data-img1="Images/Servicios/Fabricacioneinstalaciondeestructurasmetalmecanicas/FIM.png"
+                data-img2="Images/Servicios/Fabricacioneinstalaciondeestructurasmetalmecanicas/FIM2.png"
+                data-img3="Images/Servicios/Fabricacioneinstalaciondeestructurasmetalmecanicas/FIM3.png">
+                <h4>Fabricación e Instalación De Estructuras Metalmecánicas</h4>
+                <p>Fabricación e instalación de estructuras pesadas y livianas con los más altos estándares.</p>
+                <span class="servicio-num">01</span>
+            </div>
+            <div class="servicio-card" data-img1="Images/Servicios/Instalacionderedcontraincendios/FIM.png"
+                data-img2="Images/Servicios/Instalacionderedcontraincendios/FIM2.png"
+                data-img3="Images/Servicios/Instalacionderedcontraincendios/FIM3.png">
+                <h4>Instalación De Red Contraincendios</h4>
+                <p>Instalación de sistemas completos de tubería contra incendios bajo especificaciones técnicas.</p>
+                <span class="servicio-num">02</span>
+            </div>
+            <div class="servicio-card" data-img1="Images/Servicios/Instalaciondepuentes/FIM.png"
+                data-img2="Images/Servicios/Instalaciondepuentes/FIM2.png">
+                <h4>Instalación de Puentes</h4>
+                <p>Montaje estructural preciso y seguro de conexiones elevadas e industriales.</p>
+                <span class="servicio-num">03</span>
+            </div>
+            <div class="servicio-card" data-img1="Images/Servicios/Elaboracionymontajedecubiertas/FIM.png"
+                data-img2="Images/Servicios/Elaboracionymontajedecubiertas/FIM2.png">
+                <h4>Elaboración Y Montaje De Cubiertas</h4>
+                <p>Elaboración y montaje de cubiertas de alta ingeniería y resistencia climática.</p>
+                <span class="servicio-num">04</span>
+            </div>
+            <div class="servicio-card" data-img1="Images/Servicios/Fabricaciondeestructuramezanine/FIM.png"
+                data-img2="Images/Servicios/Fabricaciondeestructuramezanine/FIM2.png"
+                data-img3="Images/Servicios/Fabricaciondeestructuramezanine/FIM3.png">
+                <h4>Fabricación De Estructura Mezanine</h4>
+                <p>Fabricación de plataformas elevadas para almacenamiento o personal operativo.</p>
+                <span class="servicio-num">05</span>
+            </div>
+            <div class="servicio-card" data-img1="Images/Servicios/Fabricacioneinstalaciondecerramientos/FIM.png">
+                <h4>Fabricación e instalación de cerramientos</h4>
+                <p>Fabricación e instalación perimetral y soluciones de almacenamiento pesado.</p>
+                <span class="servicio-num">06</span>
+            </div>
+            <div class="servicio-card" data-img1="Images/Servicios/Fabricacionymontajedepuentesdeconexion/FIM.png"
+                data-img2="Images/Servicios/Fabricacionymontajedepuentesdeconexion/FIM2.png">
+                <h4>Fabricación y Montaje De Puentes de Conexión</h4>
+                <p>Fabricación y montaje de puentes de conexión industrial de alta seguridad.</p>
+                <span class="servicio-num">07</span>
+            </div>
+            <div class="servicio-card" data-img1="Images/Servicios/Fabricaciondeestanterias/FIM.png"
+                data-img2="Images/Servicios/Fabricaciondeestanterias/FIM2.png">
+                <h4>Fabricación de Estanterías</h4>
+                <p>Diseño y fabricación de estanterías industriales resistentes y funcionales.</p>
+                <span class="servicio-num">08</span>
+            </div>
+            <div class="servicio-card" data-img1="Images/Servicios/adecuaciondecontainercomooficina/FIM.png"
+                data-img2="Images/Servicios/adecuaciondecontainercomooficina/FIM2.png">
+                <h4>Adecuación de Containers como oficina</h4>
+                <p>Transformación de contenedores en oficinas modulares totalmente equipadas.</p>
+                <span class="servicio-num">09</span>
+            </div>
+            <div class="servicio-card" data-img1="Images/Servicios/Mantenimientodetuberias/FIM.png"
+                data-img2="Images/Servicios/Mantenimientodetuberias/FIM2.png">
+                <h4>Mantenimiento de Tuberías</h4>
+                <p>Mantenimiento preventivo y correctivo de tuberías industriales y de producción.</p>
+                <span class="servicio-num">10</span>
+            </div>
+            <div class="servicio-card"
+                data-img1="Images/Servicios/Fabricacioneinstalaciondetuberiacontraincendios/FIM.png">
+                <h4>Fabricación e Instalación de Tubería Contraincendios</h4>
+                <p>Fabricación e instalación de tubería contraincendios con los más altos estándares de seguridad.</p>
+                <span class="servicio-num">11</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="clientes">
+        <div class="sec-label">Quienes confían en nosotros</div>
+        <div class="sec-title">Principales <span>Clientes</span></div>
+        <div class="sec-divider"></div>
+        <p style="font-size:0.85rem; color:rgba(255,255,255,0.6); margin-bottom:36px;">Nos destaca la calidad brindada a
+            cada uno de nuestros clientes y el cumplimiento.</p>
+        <div class="clientes-grid">
+            <div class="cliente-card" data-logo="Images/ajover.png"><img src="Images/ajover.png" alt="Ajover"
+                    onerror="this.style.display='none'"></div>
+            <div class="cliente-card" data-logo="Images/districargo.png"><img src="Images/districargo.png"
+                    alt="Districargo" onerror="this.style.display='none'"></div>
+            <div class="cliente-card" data-logo="Images/extrusa.png"><img src="Images/extrusa.png" alt="Extrusa"
+                    onerror="this.style.display='none'"></div>
+            <div class="cliente-card" data-logo="Images/Distriservices.png"><img src="Images/Distriservices.png"
+                    alt="Distriservices" onerror="this.style.display='none'"></div>
+            <div class="cliente-card" data-logo="Images/Nouvelle.png"><img src="Images/Nouvelle.png" alt="Nouvelle"
+                    onerror="this.style.display='none'"></div>
+            <div class="cliente-card" data-logo="Images/altek.png"><img src="Images/altek.png" alt="Altek"
+                    onerror="this.style.display='none'"></div>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="sec-label">Estamos para servirte</div>
+        <div class="sec-title">Contác<span>tanos</span></div>
+        <div class="sec-divider"></div>
+        <div class="contacto-grid">
+            <div class="contacto-izq">
+                <img src="Images/logo.png">
+                <h2>Contactanos</h2>
+                <p>"Nacimos para servir con calidad y cumplimiento"</p>
+            </div>
+            <div class="contacto-der">
+                <div class="contacto-row">
+                    <div class="contacto-icon">👤</div>
+                    <div class="contacto-info"><strong>Jaime Ordosgoitia</strong><span>Representante comercial</span>
+                    </div>
+                </div>
+                <div class="contacto-row">
+                    <div class="contacto-icon">📞</div>
+                    <div class="contacto-info"><strong>+57 301 270 2136</strong><span>+57 321 875 3191</span></div>
+                </div>
+                <a href="https://wa.me/573012702136" target="_blank" class="btn-whatsapp">
+                    💬 Línea de WhatsApp
+                </a>
+                <div class="contacto-row">
+                    <div class="contacto-icon">✉️</div>
+                    <div class="contacto-info"><strong>solucionesmetalmetalicasj2@hotmail.com</strong></div>
+                </div>
+                <div class="contacto-row">
+                    <div class="contacto-icon">📍</div>
+                    <div class="contacto-info">
+                        <strong>Los Caracoles Mz 70 - L 04</strong>
+                        <span>1era Etapa, Cartagena - Colombia</span>
+                    </div>
+                </div>
+                <a href="https://www.google.com/maps?q=10.387014,-75.491385" target="_blank" class="mapa-preview"
+                    title="Abrir en Google Maps">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500!2d-75.491385!3d10.387014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDIzJzEzLjMiTiA3NcKwMjknMjkuMCJX!5e0!3m2!1ses!2sco!4v1700000000000"
+                        width="100%" height="160"
+                        style="border:0; border-radius:6px; display:block; pointer-events:none;" allowfullscreen=""
+                        loading="lazy">
+                    </iframe>
+                    <div class="mapa-overlay"><span>📍 Ver en Google Maps</span></div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- MODAL CLIENTES -->
+    <div id="modal-cliente" class="modal">
+        <div class="modal-content">
+            <span id="cerrar">✖</span>
+            <img id="modal-img" src="" alt="Cliente">
+        </div>
+    </div>
+
+    <!-- MODAL SERVICIOS -->
+    <div id="modal-servicio" class="modal">
+        <div class="modal-content">
+            <span id="cerrar-servicio">✖</span>
+            <img id="img-servicio" src="" alt="Servicio">
+            <div style="margin-top:10px; display:flex; justify-content:space-between;">
+                <button id="prev">⬅</button>
+                <button id="next">➡</button>
+            </div>
+        </div>
+    </div>
+    <section>
+        <div class="sec-label">Metalmecánica Cartagena</div>
+        <div class="sec-title">Estructuras <span>Metálicas</span></div>
+        <div class="sec-divider"></div>
+
+        <p>
+            Soluciones Metalmecánicas J2 presta servicios de fabricación e instalación
+            de estructuras metálicas, soldadura industrial, cubiertas,
+            cerramientos, puentes de conexión y montajes industriales en Cartagena.
+        </p>
+
+        <br>
+
+        <p>
+            Si buscas Soluciones Metal Metálicas J2, Metal Metálicas J2,
+            Metalmetalicas J2, Soluciones Metalmetalicas o servicios
+            de metalmecánica en Cartagena, nuestro equipo está listo para ayudarte.
+        </p>
+    </section>
+    <footer>
+        <span>© 2026 <strong>Soluciones Metalmecánicas J2</strong> — Todos los derechos reservados</span>
+        <span>Cartagena, Colombia</span>
+    </footer>
+
+    <script>
+        // ===== MODAL CLIENTES =====
+        const clienteCards = document.querySelectorAll('.cliente-card');
+        const modalCliente = document.getElementById('modal-cliente');
+        const modalImg = document.getElementById('modal-img');
+        const cerrar = document.getElementById('cerrar');
+
+        clienteCards.forEach(card => {
+            card.addEventListener('click', () => {
+                modalImg.src = card.getAttribute('data-logo');
+                modalCliente.style.display = 'flex';
+            });
+        });
+        cerrar.addEventListener('click', () => { modalCliente.style.display = 'none'; });
+        modalCliente.addEventListener('click', (e) => { if (e.target === modalCliente) modalCliente.style.display = 'none'; });
+
+        // ===== MODAL SERVICIOS =====
+        const servicios = document.querySelectorAll('.servicio-card');
+        const modalServicio = document.getElementById('modal-servicio');
+        const imgServicio = document.getElementById('img-servicio');
+        const cerrarServicio = document.getElementById('cerrar-servicio');
+        const prev = document.getElementById('prev');
+        const next = document.getElementById('next');
+
+        let imagenes = [];
+        let index = 0;
+        let startX = 0;
+        let isZoomed = false;
+
+        function animarCambio(direccion, nuevoIndex) {
+            const claseOut = direccion === 'next' ? 'slide-left' : 'slide-right';
+            const claseIn = direccion === 'next' ? 'slide-right' : 'slide-left';
+            imgServicio.classList.add(claseOut);
+            setTimeout(() => {
+                index = nuevoIndex;
+                imgServicio.src = imagenes[index];
+                imgServicio.classList.remove(claseOut);
+                imgServicio.classList.add(claseIn);
+                void imgServicio.offsetWidth;
+                imgServicio.classList.remove(claseIn);
+            }, 200);
+        }
+
+        next.addEventListener('click', () => {
+            if (imagenes.length <= 1) return;
+            animarCambio('next', (index + 1) % imagenes.length);
+        });
+        prev.addEventListener('click', () => {
+            if (imagenes.length <= 1) return;
+            animarCambio('prev', (index - 1 + imagenes.length) % imagenes.length);
+        });
+
+        imgServicio.addEventListener('touchstart', (e) => { startX = e.touches[0].clientX; });
+        imgServicio.addEventListener('touchend', (e) => {
+            const endX = e.changedTouches[0].clientX;
+            if (startX - endX > 50) next.click();
+            if (endX - startX > 50) prev.click();
+        });
+
+        imgServicio.addEventListener('click', () => {
+            isZoomed = !isZoomed;
+            imgServicio.classList.toggle('zoomed', isZoomed);
+        });
+
+        servicios.forEach(card => {
+            card.addEventListener('click', () => {
+                imagenes = [];
+                if (card.dataset.img1) imagenes.push(card.dataset.img1);
+                if (card.dataset.img2) imagenes.push(card.dataset.img2);
+                if (card.dataset.img3) imagenes.push(card.dataset.img3);
+                index = 0;
+                isZoomed = false;
+                imgServicio.classList.remove('zoomed');
+                imgServicio.src = imagenes[0];
+                modalServicio.style.display = 'flex';
+            });
+        });
+
+        cerrarServicio.addEventListener('click', () => {
+            modalServicio.style.display = 'none';
+            imgServicio.classList.remove('zoomed');
+        });
+        modalServicio.addEventListener('click', (e) => {
+            if (e.target === modalServicio) modalServicio.style.display = 'none';
+        });
+    </script>
+
+</body>
+
+</html>
