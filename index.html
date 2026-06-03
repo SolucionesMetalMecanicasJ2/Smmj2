@@ -126,8 +126,8 @@
 
         /* Clientes */
         [data-theme="light"] .cliente-card {
-            background: #1a1a1a;
-            border-color: rgba(204, 31, 31, 0.3);
+            background: transparent;
+            border: none;
         }
 
         [data-theme="light"] #clientes>p {
@@ -571,13 +571,13 @@
         .servicios-header {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 16px;
             margin-bottom: 50px;
         }
 
         .servicios-header img {
-            width: 70px;
-            height: 70px;
+            width: 80px;
+            height: 80px;
             object-fit: contain;
         }
 
@@ -596,6 +596,34 @@
             cursor: pointer;
             position: relative;
             overflow: hidden;
+        }
+
+        .servicio-overlay {
+            position: absolute;
+            inset: 0;
+            background: rgba(204, 31, 31, 0.85);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.25s ease;
+            border-radius: 4px;
+        }
+
+        .servicio-card:hover .servicio-overlay {
+            opacity: 1;
+        }
+
+        .servicio-overlay span {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 0.82rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #fff;
+            border: 2px solid #fff;
+            padding: 10px 20px;
+            border-radius: 4px;
         }
 
         .servicio-card::before {
@@ -651,42 +679,42 @@
 
         .clientes-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-            gap: 16px;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            align-items: center;
+            justify-items: center;
+        }
+
+        @media (max-width: 500px) {
+            .clientes-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
         }
 
         .cliente-card {
-            background: var(--gris-medio);
-            border: 1px solid rgba(255, 255, 255, 0.07);
-            border-radius: 4px;
-            padding: 24px 16px;
+            background: transparent;
+            border: none;
+            padding: 0;
             text-align: center;
             transition: all 0.3s;
             cursor: pointer;
         }
 
         .cliente-card img {
-            width: 80px;
+            width: 110px;
             height: 80px;
             object-fit: contain;
-            margin-bottom: 10px;
-            transition: transform 0.3s ease;
+            transition: transform 0.3s ease, filter 0.3s ease;
+            filter: grayscale(30%);
         }
 
         .cliente-card:hover img {
-            transform: scale(1.1);
+            transform: scale(1.12);
+            filter: grayscale(0%);
         }
 
         .cliente-card:hover {
-            border-color: var(--rojo);
-            transform: translateY(-4px);
-        }
-
-        .cliente-card span {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
-            font-size: 0.95rem;
-            color: rgba(255, 255, 255, 0.85);
+            transform: none;
         }
 
         /* CONTACTO */
@@ -1043,9 +1071,11 @@
             <li><a href="#contacto">Contáctenos</a></li>
         </ul>
         <button class="theme-btn" id="theme-toggle" title="Cambiar tema">
+            <span class="theme-icon" style="font-size:0.9rem;filter:grayscale(1);opacity:0.6;">🌙</span>
             <div class="toggle-track">
                 <div class="toggle-thumb"></div>
             </div>
+            <span class="theme-icon" style="font-size:0.9rem;filter:grayscale(1);opacity:0.6;">☀️</span>
         </button>
     </nav>
 
@@ -1123,6 +1153,7 @@
                 <h4>Fabricación e Instalación De Estructuras Metalmecánicas</h4>
                 <p>Fabricación e instalación de estructuras pesadas y livianas con los más altos estándares.</p>
                 <span class="servicio-num">01</span>
+                <div class="servicio-overlay"><span>VER IMAGEN</span></div>
             </div>
             <div class="servicio-card" data-img1="Images/Servicios/Instalacionderedcontraincendios/FIM.png"
                 data-img2="Images/Servicios/Instalacionderedcontraincendios/FIM2.png"
@@ -1130,18 +1161,21 @@
                 <h4>Instalación De Red Contraincendios</h4>
                 <p>Instalación de sistemas completos de tubería contra incendios bajo especificaciones técnicas.</p>
                 <span class="servicio-num">02</span>
+                <div class="servicio-overlay"><span>VER IMAGEN</span></div>
             </div>
             <div class="servicio-card" data-img1="Images/Servicios/Instalaciondepuentes/FIM.png"
                 data-img2="Images/Servicios/Instalaciondepuentes/FIM2.png">
                 <h4>Instalación de Puentes</h4>
                 <p>Montaje estructural preciso y seguro de conexiones elevadas e industriales.</p>
                 <span class="servicio-num">03</span>
+                <div class="servicio-overlay"><span>VER IMAGEN</span></div>
             </div>
             <div class="servicio-card" data-img1="Images/Servicios/Elaboracionymontajedecubiertas/FIM.png"
                 data-img2="Images/Servicios/Elaboracionymontajedecubiertas/FIM2.png">
                 <h4>Elaboración Y Montaje De Cubiertas</h4>
                 <p>Elaboración y montaje de cubiertas de alta ingeniería y resistencia climática.</p>
                 <span class="servicio-num">04</span>
+                <div class="servicio-overlay"><span>VER IMAGEN</span></div>
             </div>
             <div class="servicio-card" data-img1="Images/Servicios/Fabricaciondeestructuramezanine/FIM.png"
                 data-img2="Images/Servicios/Fabricaciondeestructuramezanine/FIM2.png"
@@ -1149,41 +1183,48 @@
                 <h4>Fabricación De Estructura Mezanine</h4>
                 <p>Fabricación de plataformas elevadas para almacenamiento o personal operativo.</p>
                 <span class="servicio-num">05</span>
+                <div class="servicio-overlay"><span>VER IMAGEN</span></div>
             </div>
             <div class="servicio-card" data-img1="Images/Servicios/Fabricacioneinstalaciondecerramientos/FIM.png">
                 <h4>Fabricación e instalación de cerramientos</h4>
                 <p>Fabricación e instalación perimetral y soluciones de almacenamiento pesado.</p>
                 <span class="servicio-num">06</span>
+                <div class="servicio-overlay"><span>VER IMAGEN</span></div>
             </div>
             <div class="servicio-card" data-img1="Images/Servicios/Fabricacionymontajedepuentesdeconexion/FIM.png"
                 data-img2="Images/Servicios/Fabricacionymontajedepuentesdeconexion/FIM2.png">
                 <h4>Fabricación y Montaje De Puentes de Conexión</h4>
                 <p>Fabricación y montaje de puentes de conexión industrial de alta seguridad.</p>
                 <span class="servicio-num">07</span>
+                <div class="servicio-overlay"><span>VER IMAGEN</span></div>
             </div>
             <div class="servicio-card" data-img1="Images/Servicios/Fabricaciondeestanterias/FIM.png"
                 data-img2="Images/Servicios/Fabricaciondeestanterias/FIM2.png">
                 <h4>Fabricación de Estanterías</h4>
                 <p>Diseño y fabricación de estanterías industriales resistentes y funcionales.</p>
                 <span class="servicio-num">08</span>
+                <div class="servicio-overlay"><span>VER IMAGEN</span></div>
             </div>
             <div class="servicio-card" data-img1="Images/Servicios/adecuaciondecontainercomooficina/FIM.png"
                 data-img2="Images/Servicios/adecuaciondecontainercomooficina/FIM2.png">
                 <h4>Adecuación de Containers como oficina</h4>
                 <p>Transformación de contenedores en oficinas modulares totalmente equipadas.</p>
                 <span class="servicio-num">09</span>
+                <div class="servicio-overlay"><span>VER IMAGEN</span></div>
             </div>
             <div class="servicio-card" data-img1="Images/Servicios/Mantenimientodetuberias/FIM.png"
                 data-img2="Images/Servicios/Mantenimientodetuberias/FIM2.png">
                 <h4>Mantenimiento de Tuberías</h4>
                 <p>Mantenimiento preventivo y correctivo de tuberías industriales y de producción.</p>
                 <span class="servicio-num">10</span>
+                <div class="servicio-overlay"><span>VER IMAGEN</span></div>
             </div>
             <div class="servicio-card"
                 data-img1="Images/Servicios/Fabricacioneinstalaciondetuberiacontraincendios/FIM.png">
                 <h4>Fabricación e Instalación de Tubería Contraincendios</h4>
                 <p>Fabricación e instalación de tubería contraincendios con los más altos estándares de seguridad.</p>
                 <span class="servicio-num">11</span>
+                <div class="servicio-overlay"><span>VER IMAGEN</span></div>
             </div>
         </div>
     </section>
