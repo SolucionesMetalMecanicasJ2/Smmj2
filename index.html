@@ -90,7 +90,6 @@
             font-weight: 900;
         }
 
-        /* Servicios en modo claro: títulos rojo, texto negro */
         [data-theme="light"] .servicio-card {
             border-color: rgba(204, 31, 31, 0.3);
             background: #ffffff;
@@ -110,7 +109,6 @@
             background: #f5f5f5;
         }
 
-        /* Cards conócenos en modo claro */
         [data-theme="light"] .card-gris h3 {
             font-weight: 800;
         }
@@ -124,7 +122,6 @@
             font-weight: 600;
         }
 
-        /* Clientes */
         [data-theme="light"] .cliente-card {
             background: transparent;
             border: none;
@@ -135,7 +132,6 @@
             font-weight: 700;
         }
 
-        /* Contacto */
         [data-theme="light"] .contacto-info strong {
             font-weight: 800;
         }
@@ -149,7 +145,6 @@
             background: #e2e2e2;
         }
 
-        /* Modal */
         [data-theme="light"] .modal-content {
             background: #f0f0f0;
         }
@@ -159,7 +154,6 @@
             color: #111;
         }
 
-        /* Botones en modo claro */
         [data-theme="light"] .btn-outline,
         [data-theme="light"] .btn-primary {
             background: var(--rojo);
@@ -174,13 +168,11 @@
             color: #ffffff;
         }
 
-        /* Footer */
         [data-theme="light"] footer span {
             color: rgba(17, 17, 17, 0.6);
             font-weight: 600;
         }
 
-        /* Texto general más oscuro y negrita */
         [data-theme="light"] p,
         [data-theme="light"] span,
         [data-theme="light"] li {
@@ -188,7 +180,6 @@
             color: #111111;
         }
 
-        /* TOGGLE SWITCH TEMA */
         .theme-btn {
             background: none;
             border: none;
@@ -222,7 +213,6 @@
             transition: all 0.3s ease;
         }
 
-        /* Estado: modo claro activado */
         [data-theme="light"] .toggle-track {
             border-color: #111;
             background: rgba(0, 0, 0, 0.08);
@@ -261,7 +251,6 @@
             white-space: nowrap;
         }
 
-        /* NAVBAR */
         nav {
             position: fixed;
             top: 0;
@@ -317,7 +306,6 @@
             color: var(--rojo);
         }
 
-        /* HERO */
         .hero {
             position: relative;
             width: 100%;
@@ -449,7 +437,6 @@
             transform: translateY(-3px);
         }
 
-        /* SECCIONES */
         section {
             padding: 90px 8%;
         }
@@ -483,7 +470,6 @@
             margin-bottom: 50px;
         }
 
-        /* CONÓCENOS */
         #conocenos {
             background: var(--gris-oscuro);
         }
@@ -563,7 +549,6 @@
             color: rgba(255, 255, 255, 0.75);
         }
 
-        /* SERVICIOS */
         #servicios {
             background: var(--negro);
         }
@@ -672,7 +657,6 @@
             bottom: 8px;
         }
 
-        /* CLIENTES */
         #clientes {
             background: var(--gris-oscuro);
         }
@@ -717,7 +701,6 @@
             transform: none;
         }
 
-        /* CONTACTO */
         #contacto {
             background: var(--negro);
         }
@@ -829,7 +812,6 @@
             transform: translateY(-2px);
         }
 
-        /* MAPA */
         .mapa-preview {
             display: block;
             position: relative;
@@ -873,7 +855,6 @@
             opacity: 1;
         }
 
-        /* FOOTER */
         footer {
             background: var(--gris-oscuro);
             border-top: 1px solid rgba(204, 31, 31, 0.2);
@@ -894,7 +875,6 @@
             color: var(--rojo);
         }
 
-        /* RESPONSIVE */
         @media (max-width: 900px) {
             .contacto-grid {
                 grid-template-columns: 1fr;
@@ -967,7 +947,6 @@
             }
         }
 
-        /* MODALES */
         .modal {
             display: none;
             position: fixed;
@@ -1052,7 +1031,6 @@
 
 <body>
 
-    <!-- Texto SEO oculto accesible para indexación -->
     <div class="seo-text" aria-hidden="true">
         Metal metalicas J2, metalmetalicas Cartagena, metal metalicas Cartagena, metalmetalicas J2,
         soluciones metal metalicas, soluciones metalmetalicas, soluciones metal metalicas J2,
@@ -1279,11 +1257,14 @@
                     </div>
                 </div>
                 <a href="https://wa.me/573012702136" target="_blank" class="btn-whatsapp">
-                    💬 Línea de WhatsApp
+                    Linea de WhatsApp
                 </a>
                 <div class="contacto-row">
                     <div class="contacto-icon">✉️</div>
-                    <div class="contacto-info"><strong>solucionesmetalmetalicasj2@hotmail.com</strong></div>
+                    <div class="contacto-info">
+                        <a href="mailto:solucionesmetalmetalicasj2@hotmail.com"
+                            style="color:var(--blanco); text-decoration:none; font-family:'Montserrat',sans-serif; font-weight:700; font-size:1rem;">solucionesmetalmetalicasj2@hotmail.com</a>
+                    </div>
                 </div>
                 <div class="contacto-row">
                     <div class="contacto-icon">📍</div>
@@ -1292,15 +1273,15 @@
                         <span>1era Etapa, Cartagena - Colombia</span>
                     </div>
                 </div>
-                <a href="https://www.google.com/maps?q=10.387014,-75.491385" target="_blank" class="mapa-preview"
+                <a href="https://www.google.com/maps?q=10.387028,-75.491389" target="_blank" class="mapa-preview"
                     title="Abrir en Google Maps">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500!2d-75.491385!3d10.387014!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDIzJzEzLjMiTiA3NcKwMjknMjkuMCJX!5e0!3m2!1ses!2sco!4v1700000000000"
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d500!2d-75.491389!3d10.387028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDIzJzEzLjMiTiA3NcKwMjknMjkuMCJX!5e0!3m2!1ses!2sco!4v1700000000000"
                         width="100%" height="160"
                         style="border:0; border-radius:6px; display:block; pointer-events:none;" allowfullscreen=""
                         loading="lazy">
                     </iframe>
-                    <div class="mapa-overlay"><span>📍 Ver en Google Maps</span></div>
+                    <div class="mapa-overlay"><span>Ver en Google Maps</span></div>
                 </a>
             </div>
         </div>
@@ -1320,8 +1301,8 @@
             <span id="cerrar-servicio">✖</span>
             <img id="img-servicio" src="" alt="Servicio">
             <div style="margin-top:10px; display:flex; justify-content:space-between;">
-                <button id="prev">⬅</button>
-                <button id="next">➡</button>
+                <button id="prev">&#8592;</button>
+                <button id="next">&#8594;</button>
             </div>
         </div>
     </div>
@@ -1362,7 +1343,7 @@
                 ¿Tienes alguna sugerencia o quieres contactar al desarrollador?</p>
             <a href="mailto:metalmetalicasj2pagweb@gmail.com"
                 style="display:inline-block;background:var(--rojo);color:#fff;text-decoration:none;padding:11px 22px;border-radius:4px;font-family:'Montserrat',sans-serif;font-weight:700;font-size:0.82rem;letter-spacing:1px;transition:all 0.3s;">
-                ✉️ ENVIAR CORREO
+                ENVIAR CORREO
             </a>
         </div>
     </div>
@@ -1403,8 +1384,8 @@
         let index = 0;
         let startX = 0;
         let isZoomed = false;
-
         let animando = false;
+
         function animarCambio(direccion, nuevoIndex) {
             if (animando) return;
             animando = true;
@@ -1469,7 +1450,6 @@
         const themeToggle = document.getElementById('theme-toggle');
         const html = document.documentElement;
 
-        // Siempre inicia en oscuro
         html.removeAttribute('data-theme');
 
         themeToggle.addEventListener('click', () => {
@@ -1483,7 +1463,6 @@
             }
         });
 
-        // Recordar preferencia del usuario
         const savedTheme = localStorage.getItem('theme');
         if (savedTheme === 'light') {
             html.setAttribute('data-theme', 'light');
